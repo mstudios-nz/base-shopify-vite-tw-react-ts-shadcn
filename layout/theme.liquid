@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+   
+
+    <title>
+      {{ page_title }}    
+    </title>
+
+
+    {%- liquid
+      render 'vite-tag' with 'theme.css'
+      render 'vite-tag' with 'theme.tsx'
+    -%}
+
+    {{ content_for_header }}
+
+  </head>
+
+  <body>
+    <p id="timbo"> </p>
+    <p class="tw-text-red-800">Ttesting some text with tailwind css styles</p>
+
+    {{ content_for_layout }}
+   
+
+   
+  </body>
+</html>
